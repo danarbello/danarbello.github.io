@@ -183,7 +183,10 @@
   </script>
 
   <script>
-    $('.overlay').click(function() { $(this).addClass('.overlay:hover:after'); });
+    var myElement = document.querySelector('.overlay');
+    myElement.addEventListener('click', function(e){
+      e.target.classList.toggle('overlay:hover:after');
+    });
   </script>
 </body>
 </html>
