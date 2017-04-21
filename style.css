@@ -34,11 +34,15 @@ h2 {
   text-transform: uppercase;
 }
 h3 {
-  font-size: 2rem;
+  font-size: 4rem;
+  letter-spacing: -.03em;
+  line-height: .9;
 }
 h4 {
-  font-size: .9rem;
+  font-size: .7rem;
   line-height: 1.333;
+  text-transform: uppercase;
+  letter-spacing: .05em;
   margin-top: .5rem;
   color: dimGray;
 }
@@ -50,7 +54,10 @@ a {
 }
 a:hover {
   color: black;
-  transform: skew(-10deg) scale(1.2);
+  transform: skew(-10deg);
+}
+a:visited {
+  color: tomato;
 }
 
 p {
@@ -76,6 +83,7 @@ p {
 .actions {
   margin-top: .5rem;
   color: dimGray;
+  font-weight: 600;
 }
 
 .overlay {
@@ -83,8 +91,7 @@ p {
   color: DodgerBlue;
   transition: all 460ms cubic-bezier(.842, -1.139, .135, 1.954);
 }
-.overlay:hover {
-  font-style: italic;
+.overlay:hover, .overlay:active {
   color: black;
 }
 /* - - - Base Project Overlay - - - */
@@ -207,27 +214,12 @@ footer {
 
 /* - - - Breakpoints - - - */
 
-@media (max-width: 320px) {
-  h3 {
-    font-size: 1.61803rem;
-  }
-  footer {
-    margin: 4rem 0 2rem 0;
-    line-height: 1.75rem;
-  }
-  .overlay:hover:after {
-    background-size: auto 33.333%;
-  }
-}
 @media (max-width: 480px) {
-  h1 {
-    font-size: 3rem;
-  }
   h1, h2, #contact {
     text-align: center;
   }
   h3 {
-    font-size: 1.75rem;
+    font-size: 1.3rem;
   }
   footer {
     margin: 4rem 0 2rem 0;
@@ -235,5 +227,11 @@ footer {
   }
   .overlay:hover:after {
     background-size: auto 33.333%;
+  }
+}
+
+@media (max-width: 767px) {
+  h3 {
+    font-size: 2.5rem;
   }
 }
