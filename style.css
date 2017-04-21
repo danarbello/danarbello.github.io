@@ -95,7 +95,22 @@ p {
   color: black;
 }
 /* - - - Base Project Overlay - - - */
-.overlay:hover:after {
+.overlay:hover:after, .overlaySheet:after {
+  content: " ";
+  background-image:
+    url('img/red01.jpg'),
+    url('img/red02.jpg'),
+    url('img/tang01.jpg');
+  background-size: auto 50%;
+  background-position: left top, center center, right bottom;
+  background-repeat: no-repeat;
+  display: inline-block;
+  position: fixed;
+  top: 0; bottom: 0; left: 0; right: 0;
+  z-index: -9999;
+  transition: all 4s ease;
+}
+.overlay__wrap:hover:after {
   content: " ";
   background-image:
     url('img/red01.jpg'),
@@ -118,7 +133,7 @@ p {
     url('img/red02.jpg'),
     url('img/tang01.jpg');
 }
-.overlay.nordic:hover:after {
+.overlay.nordic:hover:after, .overlaySheet.nordic:after {
   background-image:
     url('img/nord09.jpg'),
     url('img/nord12.jpg'),
@@ -181,11 +196,11 @@ footer {
   text-transform: uppercase;
   letter-spacing: .2rem;
   cursor: pointer;
+  animation: bounce 3s cubic-bezier(.842, -1.139, .135, 1.954) infinite;
   transition: all 460ms cubic-bezier(.842, -1.139, .135, 1.954);
 }
 .top:hover {
   color: black;
-  animation: bounce 3s cubic-bezier(.842, -1.139, .135, 1.954) infinite;
 }
 @keyframes bounce {
   0% { transform: translateY(0); }
