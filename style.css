@@ -1,0 +1,278 @@
+html {
+  font-family: ZXX-Sans, Inconsolata, "Courier New", Courier, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: black;
+  text-align: center;
+}
+
+body {
+  margin: 1rem;
+  transition: all 460ms cubic-bezier(.842, -1.139, .135, 1.954);
+}
+
+@font-face {
+    font-family: ZXX-Sans;
+    src: url(type/sans.ttf);
+}
+@font-face {
+    font-family: ZXX-Bold;
+    src: url(type/bold.ttf);
+    font-weight: bold;
+}
+@font-face {
+    font-family: ZXX-Camo;
+    src: url(type/camo.ttf);
+}
+@font-face {
+    font-family: ZXX-False;
+    src: url(type/false.otf);
+}
+@font-face {
+    font-family: ZXX-Noise;
+    src: url(type/noise.ttf);
+}
+@font-face {
+    font-family: ZXX-Xed;
+    src: url(type/xed.ttf);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+  line-height: 1;
+  margin: 0;
+}
+
+h1 {
+  font-family: ZXX-False;
+  font-weight: normal;
+  font-size: 2rem;
+  text-align: left;
+  margin-bottom: .75rem;
+  animation: glitch 10s cubic-bezier(.842, -1.139, .135, 1.954) infinite;
+}
+@keyframes glitch {
+  0% { font-family: ZXX-False; color: black; }
+  65% { font-family: ZXX-False; color: black; }
+  66% { font-family: ZXX-Noise; color: tomato; }
+  68% { font-family: ZXX-False; color: black; }
+  92% { font-family: ZXX-False; color: black; }
+  93% { font-family: ZXX-Noise; color: tomato; }
+  96% { font-family: ZXX-Noise; color: tomato; }
+  97% { font-family: ZXX-False; color: black;}
+  99% { font-family: ZXX-False; color: black; }
+  100% { font-family: ZXX-Noise; color: tomato; }
+}
+
+h2 {
+  font-size: .9rem;
+  margin-top: .5rem;
+}
+h3 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+h4 {
+  font-size: .9rem;
+  line-height: 1.333;
+  margin-top: .5rem;
+  color: dimGray;
+}
+a {
+  color: tomato;
+  text-decoration: none;
+  transition: all 460ms cubic-bezier(.842, -1.139, .135, 1.954);
+}
+a:hover {
+  color: black;
+  font-family: ZXX-Noise;
+}
+
+p {
+  margin: .5rem 0 0 0;
+}
+
+#contact {
+  display: block;
+  font-size: .8rem;
+  text-align: right;
+  margin-top: .5rem;
+  margin-bottom: 1rem;
+}
+
+.project {
+  padding: 2rem;
+  display: block;
+}
+
+.actions {
+  margin-top: .5rem;
+  color: dimGray;
+}
+
+.overlay {
+  cursor: pointer;
+  color: tomato;
+  transition: all 460ms cubic-bezier(.842, -1.139, .135, 1.954);
+}
+.overlay:hover {
+  font-family: ZXX-Noise;
+  color: black;
+}
+/* - - - Base Project Overlay - - - */
+.overlay:hover:after {
+  content: " ";
+  background-image:
+    url('img/red01.jpg'),
+    url('img/red02.jpg'),
+    url('img/tang01.jpg');
+  background-size: auto 50%;
+  background-position: left top, center center, right bottom;
+  background-repeat: no-repeat;
+  display: inline-block;
+  position: fixed;
+  top: 0; bottom: 0; left: 0; right: 0;
+  z-index: -9999;
+  transition: all 4s ease;
+}
+
+/* - - - Project Overlays - - - */
+.overlay.red:hover:after {
+  background-image:
+    url('img/red01.jpg'),
+    url('img/red02.jpg'),
+    url('img/tang01.jpg');
+}
+.overlay.nordic:hover:after {
+  background-image:
+    url('img/nord09.jpg'),
+    url('img/nord12.jpg'),
+    url('img/nord03.jpg');
+}
+.overlay.bbyo:hover:after {
+  background-image:
+    url('img/bbyo01.jpg'),
+    url('img/bbyo02.jpg'),
+    url('img/bbyo06.jpg');
+}
+.overlay.lanxess:hover:after {
+  background-image:
+    url('img/lxs01.jpg'),
+    url('img/lxs03.jpg'),
+    url('img/lxs05.jpg');
+}
+.overlay.library:hover:after {
+  background-image:
+    url('img/loc01.jpg'),
+    url('img/loc03.jpg'),
+    url('img/loc05.jpg');
+}
+.overlay.cis:hover:after {
+  background-image:
+    url('img/cis02.jpg'),
+    url('img/cis03.jpg'),
+    url('img/cis05.jpg');
+}
+.overlay.tang:hover:after {
+  background-image:
+    url('img/tang01.jpg'),
+    url('img/tang02.jpg'),
+    url('img/tang03.jpg');
+}
+
+.sad {
+  font-family: ZXX-Xed;
+  color: gray;
+}
+.sad:hover:after {
+  display: inline-block;
+  position: absolute;
+  content: "having a sad";
+  margin-left: 3px;
+  text-align: left;
+  font-family: ZXX-Bold; color: tomato; font-size: 75%; line-height: 1;
+}
+
+footer {
+  margin: 4rem 0;
+  font-size: .6rem;
+}
+.top {
+  display: block;
+  padding: .5rem 0;
+  color: tomato;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: .2rem;
+  cursor: pointer;
+  transition: all 460ms cubic-bezier(.842, -1.139, .135, 1.954);
+}
+.top:hover {
+  color: black;
+  animation: bounce 3s cubic-bezier(.842, -1.139, .135, 1.954) infinite;
+}
+@keyframes bounce {
+  0% { transform: translateY(0); }
+  70% { transform: translateY(0); }
+  76% { transform: translateY(-.2rem); }
+  82% { transform: translateY(0); }
+  88% { transform: translateY(0); }
+  94% { transform: translateY(-.2rem); }
+  100% { transform: translateY(0); }
+}
+
+.reject {
+  font-family: ZXX-Xed;
+  font-weight: normal;
+}
+.reject:after {
+  content: "rejected";
+  display: inline-block;
+  margin-left: 3px;
+  font-family: ZXX-Bold;
+  font-size: 40%;
+  color: silver;
+  text-transform: uppercase;
+  letter-spacing: .05em;
+  vertical-align: top;
+  position: absolute;
+}
+
+/* - - - Breakpoints - - - */
+
+@media (max-width: 320px) {
+  html {
+    font-size: 14px;
+  }
+  h3 {
+    font-size: 1.61803rem;
+  }
+  footer {
+    margin: 4rem 0 2rem 0;
+    line-height: 1.75rem;
+  }
+  .overlay:hover:after {
+    background-size: auto 33.333%;
+  }
+}
+@media (max-width: 480px) {
+  html {
+    font-size: 14px;
+  }
+  h1 {
+    font-size: 3rem;
+  }
+  h1, h2, #contact {
+    text-align: center;
+  }
+  h3 {
+    font-size: 1.75rem;
+  }
+  footer {
+    margin: 4rem 0 2rem 0;
+    line-height: 2;
+  }
+  .overlay:hover:after {
+    background-size: auto 33.333%;
+  }
+}
