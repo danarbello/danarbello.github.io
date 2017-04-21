@@ -91,11 +91,11 @@ p {
   color: DodgerBlue;
   transition: all 460ms cubic-bezier(.842, -1.139, .135, 1.954);
 }
-.overlay:hover, .overlay:active {
+.overlay:hover, .overlay:focus {
   color: black;
 }
 /* - - - Base Project Overlay - - - */
-.overlay:hover:after {
+.overlay:hover:after, .overlay:focus:after {
   content: " ";
   background-image:
     url('img/red01.jpg'),
@@ -225,7 +225,7 @@ footer {
     margin: 4rem 0 2rem 0;
     line-height: 2;
   }
-  .overlay:hover:after {
+  .overlay:hover:after, .overlay:active:after {
     background-size: auto 33.333%;
   }
 }
