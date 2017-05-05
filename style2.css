@@ -9,7 +9,7 @@ html {
 
 /* - - - new tiles - - - */
 
-.block {
+.row {
   display: flex;
   flex-direction: row;
   align-items: stretch;
@@ -36,8 +36,21 @@ html {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background: blue;
+  color: white;
 }
 
+@media (max-width: 991px) {
+  .row {
+    flex-direction: row;
+  }
+}
+
+.red {
+  background: url('img/red01.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 /* - - - - - - - - - - - */
 
 body {
