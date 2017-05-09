@@ -1,0 +1,259 @@
+html {
+  font-family: 'Work Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.5;
+  color: black;
+  text-align: center;
+}
+
+body {
+  margin: 1rem;
+  transition: all 460ms cubic-bezier(.842, -1.139, .135, 1.954);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Work Sans';
+  font-weight: 600;
+  line-height: 1;
+  margin: 0;
+}
+
+h1 {
+  font-size: 2rem;
+  text-align: left;
+  margin-bottom: .75rem;
+  font-weight: 900;
+  letter-spacing: .02em;
+}
+
+h2 {
+  font-size: .8rem;
+  margin-top: .5rem;
+  letter-spacing: .07em;
+  text-transform: uppercase;
+}
+h3 {
+  font-size: 4rem;
+  letter-spacing: -.03em;
+  line-height: .9;
+}
+h4 {
+  font-size: .7rem;
+  line-height: 1.333;
+  text-transform: uppercase;
+  letter-spacing: .05em;
+  margin-top: .5rem;
+  color: dimGray;
+}
+a {
+  display: inline-block;
+  color: DodgerBlue;
+  text-decoration: none;
+  transition: all 460ms cubic-bezier(.842, -1.139, .135, 1.954);
+}
+a:hover {
+  color: black;
+  transform: skew(-10deg);
+}
+a:visited {
+  color: tomato;
+}
+
+p {
+  margin: .5rem 0 0 0;
+}
+
+#contact {
+  display: block;
+  font-size: .8rem;
+  text-align: right;
+  margin-top: .5rem;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: .05em;
+  font-weight: 600;
+}
+
+.project {
+  padding: 2rem;
+  display: block;
+}
+
+.actions {
+  margin-top: .5rem;
+  color: dimGray;
+  font-weight: 600;
+}
+
+.overlay {
+  cursor: pointer;
+  color: DodgerBlue;
+  transition: all 460ms cubic-bezier(.842, -1.139, .135, 1.954);
+}
+.overlay:hover {
+  color: black;
+}
+/* - - - Base Project Overlay - - - */
+.overlay:hover:after, .overlaySheet:after {
+  content: " ";
+  background-image:
+    url('img/red01.jpg'),
+    url('img/red02.jpg'),
+    url('img/tang01.jpg');
+  background-size: auto 50%;
+  background-position: left top, center center, right bottom;
+  background-repeat: no-repeat;
+  display: inline-block;
+  position: fixed;
+  top: 0; bottom: 0; left: 0; right: 0;
+  z-index: -9999;
+  transition: all 4s ease;
+}
+.overlay__button {
+  cursor: pointer;
+  color: DodgerBlue;
+}
+.showOverlay {
+  display: block !important;
+}
+.overlay__wrap {
+  display: none;
+  content: " ";
+  background-image:
+    url('img/red01.jpg'),
+    url('img/red02.jpg'),
+    url('img/tang01.jpg');
+  background-size: auto 50%;
+  background-position: left top, center center, right bottom;
+  background-repeat: no-repeat;
+  position: fixed;
+  top: 0; bottom: 0; left: 0; right: 0;
+  z-index: -9999;
+  transition: all 4s ease;
+}
+
+/* - - - Project Overlays - - - */
+.overlay.red:hover:after {
+  background-image:
+    url('img/red01.jpg'),
+    url('img/red02.jpg'),
+    url('img/tang01.jpg');
+}
+.overlay.nordic:hover:after, .overlaySheet.nordic:after {
+  background-image:
+    url('img/nord09.jpg'),
+    url('img/nord12.jpg'),
+    url('img/nord03.jpg');
+}
+.overlay.bbyo:hover:after {
+  background-image:
+    url('img/bbyo01.jpg'),
+    url('img/bbyo02.jpg'),
+    url('img/bbyo06.jpg');
+}
+.overlay.lanxess:hover:after {
+  background-image:
+    url('img/lxs01.jpg'),
+    url('img/lxs03.jpg'),
+    url('img/lxs05.jpg');
+}
+.overlay.library:hover:after {
+  background-image:
+    url('img/loc01.jpg'),
+    url('img/loc03.jpg'),
+    url('img/loc05.jpg');
+}
+.overlay.cis:hover:after {
+  background-image:
+    url('img/cis02.jpg'),
+    url('img/cis03.jpg'),
+    url('img/cis05.jpg');
+}
+.overlay.tang:hover:after {
+  background-image:
+    url('img/tang01.jpg'),
+    url('img/tang02.jpg'),
+    url('img/tang03.jpg');
+}
+
+.sad {
+  color: gray;
+}
+.sad:hover:after {
+  display: inline-block;
+  position: absolute;
+  content: "having a sad";
+  margin-left: 3px;
+  text-align: left;
+  color: DodgerBlue;
+  font-size: 60%;
+  line-height: 1;
+}
+
+footer {
+  margin: 4rem 0;
+  font-size: .6rem;
+}
+.top {
+  display: block;
+  padding: .5rem 0;
+  color: DodgerBlue;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: .2rem;
+  cursor: pointer;
+  animation: bounce 3s cubic-bezier(.842, -1.139, .135, 1.954) infinite;
+  transition: all 460ms cubic-bezier(.842, -1.139, .135, 1.954);
+}
+.top:hover {
+  color: black;
+}
+@keyframes bounce {
+  0% { transform: translateY(0); }
+  70% { transform: translateY(0); }
+  76% { transform: translateY(-.2rem); }
+  82% { transform: translateY(0); }
+  88% { transform: translateY(0); }
+  94% { transform: translateY(-.2rem); }
+  100% { transform: translateY(0); }
+}
+
+.reject {
+  text-decoration: line-through;
+}
+.reject:after {
+  content: "rejected";
+  display: inline-block;
+  margin-left: 3px;
+  font-size: 40%;
+  color: silver;
+  text-transform: uppercase;
+  letter-spacing: .05em;
+  vertical-align: top;
+  position: absolute;
+}
+
+/* - - - Breakpoints - - - */
+
+@media (max-width: 480px) {
+  h1, h2, #contact {
+    text-align: center;
+  }
+  h3 {
+    font-size: 1.3rem;
+  }
+  footer {
+    margin: 4rem 0 2rem 0;
+    line-height: 2;
+  }
+  .overlay:hover:after, .overlay:active:after {
+    background-size: auto 33.333%;
+  }
+}
+
+@media (max-width: 767px) {
+  h3 {
+    font-size: 2.5rem;
+  }
+}

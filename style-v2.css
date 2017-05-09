@@ -26,7 +26,6 @@ html {
 .tile {
   display: block;
   flex: 1; -webkit-box-flex: 1; -webkit-flex: 1; -ms-flex: 1;
-  padding: 0 10px 10px 0;
 }
 
 .tile__content {
@@ -37,7 +36,13 @@ html {
   justify-content: center;
   align-items: center;
   background: blue;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
   color: white;
+  border-top: 10px solid white;
+  border-right: 5px solid white;
+  border-bottom: 10px solid white;
+  border-left: 5px solid white;
 }
 
 @media (max-width: 991px) {
@@ -47,10 +52,15 @@ html {
 }
 
 .red {
-  background: url('img/red01.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
+  background-image: url('img/red01.jpg');
+  background-size: 100%;
 }
+.bbyo {
+  background-image: url('img/bbyo01.jpg');
+  background-size: 100%;
+  background-position: center center;
+}
+
 /* - - - - - - - - - - - */
 
 body {
